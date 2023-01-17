@@ -69,6 +69,7 @@ function App() {
             type='text' 
             id='cardNumber' 
             placeholder='e.g. 1234 5678 9123 0000'
+            maxLength='16'
             value={values.cardNumber}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -86,6 +87,7 @@ function App() {
                 type='text'  
                 id='expDateM'
                 placeholder='MM'
+                maxLength='2'
                 value={values.expDateM}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -96,6 +98,7 @@ function App() {
                 type='text' 
                 id='expDateY'
                 placeholder='YY'
+                maxLength='2'
                 value={values.expDateY}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -112,6 +115,7 @@ function App() {
                 type='text'
                 id='cvc' 
                 placeholder='123'
+                maxLength='3'
                 value={values.cvc}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -119,7 +123,7 @@ function App() {
               {errors.cvc && touched.cvc && <span className='error-message'>{errors.cvc}</span>}
           </label>       
         </div>
-        <button>Confirm</button>
+        <button type='submit' >Confirm</button>
       </form>
     </div>
   );
