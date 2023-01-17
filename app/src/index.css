@@ -74,7 +74,7 @@ body {
 .on-card-exp-m {
   position: absolute;
   top: 200px;
-  right: 120px;
+  right: 124px;
   font-size: 13px;
   text-transform: uppercase;
   color: white;
@@ -92,7 +92,7 @@ body {
 .slash {
   position: absolute;
   top: 200px;
-  right: 115px;
+  right: 118px;
   font-size: 13px;
   text-transform: uppercase;
   color: white;
@@ -218,71 +218,17 @@ button:hover {
 =========== ERROR MESSAGES ===============
 ========================================== */
 
-.error-message-name {
-  display: none;
-  font-size: 13px;
-  color: hsl(0, 100%, 66%);
-}
-
-.error-message-number {
-  display: none;
+.error-message {
   font-size: 13px;
   color: hsl(0, 100%, 66%);
 }
 
 .error-message-exp {
-  display: none;
-  font-size: 13px;
-  color: hsl(0, 100%, 66%);
   position: absolute;
   top: 273px;
 }
 
-.error-message-cvc {
-  display: none;
-  font-size: 13px;
-  color: hsl(0, 100%, 66%);
-}
-
-
-
-.input-cardholder-name:invalid[focused='true'] ~ .error-message-name {
-  display: block;
-}
-
-.input-cardholder-name:invalid[focused='true'] {
-  border: 1px solid red;
-}
-
-.input-card-number:invalid[focused='true'] ~ .error-message-number {
-  display: block;
-}
-
-.input-card-number:invalid[focused='true'] {
-  border: 1px solid red;
-}
-
-.input-exp-date-m:invalid[focused='true'] ~ .error-message-exp {
-  display: block;
-}
-
-.input-exp-date-m:invalid[focused='true'] {
-  border: 1px solid red;
-}
-
-.input-exp-date-y:invalid[focused='true'] ~ .error-message-exp {
-  display: block;
-}
-
-.input-exp-date-y:invalid[focused='true'] {
-  border: 1px solid red;
-}
-
-.input-cvc:invalid[focused='true'] ~ .error-message-cvc {
-  display: block;
-}
-
-.input-cvc:invalid[focused='true'] {
+.input-border-red {
   border: 1px solid red;
 }
 
