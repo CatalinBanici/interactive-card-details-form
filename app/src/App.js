@@ -6,7 +6,7 @@ import { schema } from './Schema/ValidationSchema';
 
 function App() {
 
-  const { values, errors, touched, handleChange, handleBlur, handleSubmit } = useFormik({
+  const { values, errors, touched, isSubmitting, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: {
       cardName: '',
       cardNumber: '',
@@ -18,12 +18,10 @@ function App() {
     onSubmit
   });
 
-  function onSubmit() {
-    console.log('Submitted!')
+  async function onSubmit() {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    console.log(values)
   }
-
-  console.log(values)
-  // console.log(errors)
 
   return (
     <div className="app-container">
@@ -123,7 +121,7 @@ function App() {
               {errors.cvc && touched.cvc && <span className='error-message'>{errors.cvc}</span>}
           </label>       
         </div>
-        <button type='submit' >Confirm</button>
+        <button type='submit' disabled={isSubmitting}>{isSubmitting ? 'Processing payment...' : 'Confirm'}</button>
       </form>
     </div>
   );
