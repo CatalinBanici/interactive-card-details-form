@@ -227,11 +227,6 @@ button:disabled {
   color: hsl(0, 100%, 66%);
 }
 
-.error-message-exp {
-  position: absolute;
-  top: 273px;
-}
-
 .input-border-red {
   border: 1px solid red;
 }
