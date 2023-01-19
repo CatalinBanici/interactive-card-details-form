@@ -13,9 +13,7 @@ export default function Header(props) {
             <div className='card-img-container'>
                 <span className='on-card-name'>{values.cardName || 'Jane Appleseed'}</span>
                 <span className='on-card-number'>{values.cardNumber || '0000 0000 0000 0000'}</span>
-                <span className='on-card-exp-m'>{values.expDateM || '00'}</span>
-                <span className='slash'>/</span>
-                <span className='on-card-exp-y'>{values.expDateY || '00'}</span>
+                <span className='on-card-exp'>{values.expDateM || '00'}/{values.expDateY || '00'}</span>
                 <span className='cvc-on-card'>{values.cvc || '000'}</span>
                 <svg className='card-logo' width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/>

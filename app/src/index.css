@@ -71,28 +71,10 @@ body {
   color: white;
 }
 
-.on-card-exp-m {
+.on-card-exp {
   position: absolute;
   top: 200px;
   right: 124px;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: white;
-}
-
-.on-card-exp-y {
-  position: absolute;
-  top: 200px;
-  right: 100px;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: white;
-}
-
-.slash {
-  position: absolute;
-  top: 200px;
-  right: 118px;
   font-size: 13px;
   text-transform: uppercase;
   color: white;
