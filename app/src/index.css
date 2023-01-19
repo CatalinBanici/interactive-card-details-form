@@ -4,13 +4,10 @@
   padding: 0;
 }
 
-
-
 body {
   width: 1440px;
   font-family: "Space Grotesk";
   font-weight: 500;
-  
 }
 
 .app-container {
@@ -20,7 +17,6 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  
 }
 
 /* header container */
@@ -38,6 +34,7 @@ body {
   position: absolute;
   height: 525px;
   width: 525px;
+  margin: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -50,7 +47,6 @@ body {
 
 .card-back {
   align-self: flex-end;
-  
 }
 
 .on-card-name {
@@ -89,28 +85,23 @@ body {
   color: white;
 }
 
-
-
-
 .card-logo {
   position: absolute;
   top: 30px;
   left: 30px;
 }
- 
+
 /* form container */
 
 .form-container {
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  
+
   max-width: 400px;
   justify-content: center;
   align-items: flex-start;
-  margin: 75px;
-
-  
+  margin: 30px;
 }
 
 .label {
@@ -127,11 +118,9 @@ body {
 
 .exp-cvc-container {
   display: flex;
-  
+
   justify-content: space-between;
 }
-
-
 
 .card-exp {
   display: flex;
@@ -165,7 +154,6 @@ input {
   border: 1px solid rgb(223, 221, 221);
   border-radius: 7px;
   padding: 15px;
-  
 }
 
 input:focus {
@@ -173,12 +161,11 @@ input:focus {
   padding: 15px;
   border: double 1px transparent;
   border-radius: 7px;
-  background-image: linear-gradient(white, white), 
-                    linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
-
 
 button {
   width: 100%;
@@ -189,7 +176,6 @@ button {
   background-color: hsl(278, 68%, 11%);
   color: white;
   cursor: pointer;
-
 }
 
 button:hover {
@@ -213,4 +199,20 @@ button:disabled {
   border: 1px solid red;
 }
 
+.complete-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 275px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+}
 
+.complete-container h2 {
+  color: hsl(278, 68%, 11%);
+}
+
+.complete-container p {
+  color: hsl(279, 6%, 55%);
+}
