@@ -8,7 +8,7 @@ export default function Header(props) {
 
   return (
     <header className="header-container">
-      <img className="main-image" src={MainDesktop} alt="main" />
+      <div className="main-image"></div>
       <div className="card-img-container">
         <span className="on-card-name">
           {values.cardName || "Jane Appleseed"}
@@ -19,7 +19,7 @@ export default function Header(props) {
         <span className="on-card-exp">
           {values.expDateM || "00"}/{values.expDateY || "00"}
         </span>
-        <span className="cvc-on-card">{values.cvc || "000"}</span>
+        <span className="on-card-cvc">{values.cvc || "000"}</span>
         <svg
           className="card-logo"
           width="84"

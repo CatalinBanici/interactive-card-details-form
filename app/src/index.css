@@ -19,11 +19,13 @@ body {
   width: 100vw;
 }
 
-/* header container */
+/* ===============================================================
+================= HEADER CONTAINER ============================
+=============================================================== */
 
 .header-container {
   height: 100vh;
-  width: 725px;
+  width: 720px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,9 +34,10 @@ body {
 
 .card-img-container {
   position: absolute;
+  align-self: flex-end;
   height: 525px;
   width: 525px;
-  margin: 30px;
+  margin: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,6 +45,11 @@ body {
 }
 
 .main-image {
+  height: 100vh;
+  width: 500px;
+  background-image: url(./Assets/images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
   align-self: flex-start;
 }
 
@@ -76,7 +84,7 @@ body {
   color: white;
 }
 
-.cvc-on-card {
+.on-card-cvc {
   position: absolute;
   bottom: 117px;
   right: 55px;
@@ -91,17 +99,28 @@ body {
   left: 30px;
 }
 
-/* form container */
+/* ===============================================================
+================= MAIN CONTAINER ==============================
+=============================================================== */
+
+.main-container {
+  height: 100vh;
+  width: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .form-container {
   position: relative;
   display: inline-flex;
   flex-direction: column;
-
+  align-self: flex-start;
   max-width: 400px;
   justify-content: center;
   align-items: flex-start;
-  margin: 30px;
+  margin: 40px;
 }
 
 .label {
@@ -114,12 +133,6 @@ body {
   color: hsl(0, 0%, 23%);
   font-weight: bold;
   font-size: 15px;
-}
-
-.exp-cvc-container {
-  display: flex;
-
-  justify-content: space-between;
 }
 
 .card-exp {
@@ -142,6 +155,11 @@ body {
 
 .card-exp div span {
   float: inline-end;
+}
+
+.exp-cvc-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .cvc {
@@ -186,6 +204,29 @@ button:disabled {
   background-color: rgb(73, 73, 73);
 }
 
+/* ===============================================================
+================= COMPLETE CONTAINER ==========================
+=============================================================== */
+
+.complete-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 275px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px;
+  align-self: flex-start;
+}
+
+.complete-container h2 {
+  color: hsl(278, 68%, 11%);
+}
+
+.complete-container p {
+  color: hsl(279, 6%, 55%);
+}
+
 /* ==========================================
 =========== ERROR MESSAGES ===============
 ========================================== */
@@ -199,20 +240,124 @@ button:disabled {
   border: 1px solid red;
 }
 
-.complete-container {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  height: 275px;
-  justify-content: space-between;
-  align-items: center;
-  margin: 30px;
+@media screen and (max-width: 1150px) {
+  .main-container {
+    width: 600px;
+  }
 }
 
-.complete-container h2 {
-  color: hsl(278, 68%, 11%);
+@media screen and (max-width: 1050px) {
+  .form-container {
+    margin: 15px;
+    margin-right: 20px;
+  }
+  .card-img-container {
+    margin: 15px;
+    height: 450px;
+    width: 400px;
+  }
+  .card-back {
+    align-self: flex-start;
+    width: 400px;
+  }
+
+  .card-front {
+    width: 400px;
+  }
+
+  .main-image {
+    width: 400px;
+    background-size: cover;
+  }
+  .on-card-name {
+    top: 180px;
+    left: 30px;
+  }
+
+  .on-card-number {
+    top: 140px;
+    left: 30px;
+  }
+
+  .on-card-exp {
+    top: 180px;
+    right: 40px;
+  }
+
+  .on-card-cvc {
+    bottom: 103px;
+    right: 55px;
+  }
 }
 
-.complete-container p {
-  color: hsl(279, 6%, 55%);
+@media screen and (max-width: 790px) {
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-image {
+    height: 350px;
+    width: 100vw;
+    background-image: url(./Assets/images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-self: center;
+  }
+
+  .header-container {
+    height: 350px;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-img-container {
+    width: 500px;
+    height: 385px;
+    align-self: center;
+    top: 40px;
+  }
+
+  .card-back {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .card-front {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+  }
+
+  .form-container {
+    align-self: center;
+  }
+
+  .on-card-name {
+    bottom: 20px;
+    left: 30px;
+    z-index: 2;
+  }
+
+  .on-card-number {
+    top: 140px;
+    left: 30px;
+    z-index: 2;
+  }
+
+  .on-card-exp {
+    bottom: 50px;
+    right: 40px;
+    z-index: 2;
+  }
+
+  .on-card-cvc {
+    top: 118px;
+    right: 70px;
+    z-index: 2;
+  }
 }
