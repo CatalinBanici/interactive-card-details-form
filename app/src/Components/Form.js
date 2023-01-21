@@ -116,7 +116,7 @@ export default function Form(props) {
           </label>
         </div>
         <button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "Processing payment..." : "Confirm"}
+          {isSubmitting ? "Processing..." : "Confirm"}
         </button>
       </form>
     </main>
