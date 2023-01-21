@@ -44,8 +44,11 @@ export default function Form(props) {
             type="text"
             id="cardNumber"
             placeholder="e.g. 1234 5678 9123 0000"
-            maxLength="16"
-            value={values.cardNumber}
+            maxLength="19"
+            value={values.cardNumber
+              .replace(/\s/g, "")
+              .replace(/([0-9]{4})/g, "$1 ")
+              .trim()}
             onChange={handleChange}
             onBlur={handleBlur}
           />
