@@ -45,6 +45,7 @@ export default function Form(props) {
             id="cardNumber"
             placeholder="e.g. 1234 5678 9123 0000"
             maxLength="19"
+            minLength="19"
             value={values.cardNumber
               .replace(/\s/g, "")
               .replace(/([0-9]{4})/g, "$1 ")
@@ -71,6 +72,7 @@ export default function Form(props) {
                 id="expDateM"
                 placeholder="MM"
                 maxLength="2"
+                minLength="2"
                 value={values.expDateM}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -85,6 +87,7 @@ export default function Form(props) {
                 id="expDateY"
                 placeholder="YY"
                 maxLength="2"
+                minLength="2"
                 value={values.expDateY}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -109,6 +112,7 @@ export default function Form(props) {
               id="cvc"
               placeholder="123"
               maxLength="3"
+              minLength="3"
               value={values.cvc}
               onChange={handleChange}
               onBlur={handleBlur}
